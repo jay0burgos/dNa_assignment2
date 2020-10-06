@@ -12,6 +12,7 @@ public class question1 {
             this.top2 = arr.length;
 
         }
+
         public void push(int stack, arrayType newObject){
               switch (stack){    //chooses which stack to push
                   case 1:
@@ -36,6 +37,7 @@ public class question1 {
                   }
               }
         }
+
         public arrayType pop(int stack){
             switch (stack){    //chooses which stack to pop
                 case 1:
@@ -51,13 +53,38 @@ public class question1 {
                 case 2:
                 {
                     if (!(top2 == this.arr.length))//checks if its empty)
-                    {
+                    {          //wont nullify since next push will overide
                         this.top2++;
                         return arr[top2-1];
 
                     }
                     else
                         System.out.println("Overflow error");
+                }
+                default:
+                    return null;
+            }
+        }
+
+        public arrayType peek(int stack){       //peeks top of stack
+            switch (stack){    //chooses which stack to pop
+                case 1:
+                {
+                    if (!(top1 == -1)) //checks if its empty
+                    {
+                        return arr[top1];
+                    }
+                    else
+                        System.out.println("Stack is empty");
+                }
+                case 2:
+                {
+                    if (!(top2 == this.arr.length))//checks if its empty)
+                    {
+                        return arr[top2];
+                    }
+                    else
+                        System.out.println("Stack is empty");
                 }
                 default:
                     return null;
