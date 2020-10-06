@@ -90,5 +90,27 @@ public class question1 {
                     return null;
             }
         }
+
+        public boolean empty(int stack){
+            switch (stack){    //chooses which stack to pop
+                case 1:
+                {
+                    if ((top1 == -1)) //checks if its empty
+                        return true;
+                    else
+                        return false;
+                }
+                case 2:
+                {
+                    if ((top2 == this.arr.length))//checks if its empty
+                        return true;
+
+                    else
+                        return false;
+                }
+                default:
+                    return false;
+            }
+        }
     }
 }
