@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 import java.util.Random;
 
 public class question8 {
@@ -46,6 +47,10 @@ public class question8 {
             this.r = new Random();
         }
 
+        public node getRoot() {
+            return root;
+        }
+
         private void addNode(int x, node current){
             if (current == null){
                 this.root = new node(x) ;
@@ -85,5 +90,6 @@ public class question8 {
         }
 
     }
+
 
 }
