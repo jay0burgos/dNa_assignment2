@@ -70,9 +70,11 @@ public class question8 {
                      this.push(left);
                  }
                  else{
-                     int randoVal = r.nextInt(right)+left;
+                     int randoVal = r.nextInt(right)+left;    //generates any number between the boundaries and
+                     // pushes it
                      this.push(randoVal);
-                     this.makeRandoTree(left, randoVal);     //splits between left and random
+                     this.makeRandoTree(left, randoVal);     //splits between left and random and calls the funciton
+                     // again
                      this.makeRandoTree(randoVal, right);  //splits between random and right
                  }
              }
