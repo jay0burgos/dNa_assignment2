@@ -78,7 +78,7 @@ public class question3 {
               boolean found = false;
               for (node current = this.root; current != null; current = current.getRight()){
                   if(current.getPayload() == x){
-                      found = true
+                      found = true;
                   }
               }
               return found;
